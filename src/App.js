@@ -14,7 +14,7 @@ import OrderSingle from './components/views/OrderSingle/OrderSingle';
 
 function App() {
   return (
-    <BrowserRouter basename={'/panel'}>
+    <BrowserRouter>
       <MainLayout>
         <Switch>
           <Route exact path={`${process.env.PUBLIC_URL}/`} component={Homepage} /> {/* ponizej inna forma zapisu routingu */}
