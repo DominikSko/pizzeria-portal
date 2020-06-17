@@ -26,7 +26,7 @@ function App() {
           <Route exact path={process.env.PUBLIC_URL + '/waiter/new'} component={OrderNew} />
           <Route exact path={process.env.PUBLIC_URL + '/waiter/order/:id'} component={OrderSingle} />
           <Route exact path={process.env.PUBLIC_URL + '/kitchen'} component={Kitchen} />
-          <Redirect from={process.env.PUBLIC_URL} to={process.env.PUBLIC_URL + '/home'} /> 
+          <Redirect from={process.env.PUBLIC_URL} to={'/home'} /> 
         </Switch>
       </MainLayout>
     </BrowserRouter>
