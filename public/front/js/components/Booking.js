@@ -119,9 +119,9 @@ export class Booking {
     thisBooking.booked = {};
     //console.log('eventsCurrent', eventsCurrent);
 
-    for (let event of eventsCurrent) {
+    for (let eventBooking of eventsCurrent) {
       //console.log('event from eventsCurrent', event);
-      thisBooking.makeBooked(event.date, event.hour, event.duration, event.table);
+      thisBooking.makeBooked(eventBooking.date, eventBooking.hour, eventBooking.duration, eventBooking.table);
     }
 
     for (let event of bookings) {
@@ -144,6 +144,7 @@ export class Booking {
 
     // komunikat updateDOM nie wyświetla się jednak, jeśli po odświeżeniu strony nie zmienimy daty ani godziny. Aby temu zaradzić, dodaj wywołanie metody updateDOM na końcu metody parseData.
     thisBooking.updateDOM();
+    thisBooking.rangeSlider();
 
   }
   makeBooked(date, hour, duration, table) {   // do omówienia
