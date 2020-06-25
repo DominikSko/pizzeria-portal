@@ -3,7 +3,7 @@
 // Dzięki temu informacje takie jak adres API będą zapisane tylko w jednym miejscu i łatwo będzie je zmienić w razie potrzeby.
 
 export const api = {
-    url: '//' + window.location.hostname + (window.location.hostname=='localhost' ? ':3131' : ''),
+    url: '//' + window.location.hostname + (window.location.hostname=='localhost' ? ':3131' : '') + '/api',
     product: 'product',
     order: 'order',
     booking: 'booking',
